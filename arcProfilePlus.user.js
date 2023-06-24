@@ -144,7 +144,7 @@ function updateContent() {
         return;
     }
 
-    apiUpdate = true;
+    apiUpdate = false;
 
     const columns = document.getElementsByClassName("arcPlusCol");
 
