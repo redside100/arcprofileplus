@@ -174,13 +174,13 @@ function updateContent() {
 
     let difficulty = undefined;
     if (info.value.recent_score?.[0]?.difficulty === 0) {
-        difficulty = "PST";
+        difficulty = "(PST)";
     } else if (info.value.recent_score?.[0]?.difficulty === 1) {
-        difficulty = "PRS";
+        difficulty = "(PRS)";
     } else if (info.value.recent_score?.[0]?.difficulty === 2) {
-        difficulty = "FTR";
+        difficulty = "(FTR)";
     } else if (info.value.recent_score?.[0]?.difficulty === 3) {
-        difficulty = "BYD";
+        difficulty = "(BYD)";
     }
 
     columns[4].appendChild(createPara("Song ID: " + info.value.recent_score?.[0]?.song_id + " " + difficulty));
