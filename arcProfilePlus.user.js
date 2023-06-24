@@ -172,17 +172,18 @@ function updateContent() {
     columns[2].appendChild(createPara("Hollow Cores: " + info.value.cores.find(x => x.core_type === "core_hollow")?.amount));
     columns[3].appendChild(createPara("Desolate Cores: " + info.value.cores.find(x => x.core_type === "core_desolate")?.amount));
 
-    columns[4].appendChild(createPara("Song ID: " + info.value.recent_score?.[0]?.song_id));
     let difficulty = undefined;
     if (info.value.recent_score?.[0]?.difficulty === 0) {
-        difficulty = "Past";
+        difficulty = "PST";
     } else if (info.value.recent_score?.[0]?.difficulty === 1) {
-        difficulty = "Present";
+        difficulty = "PRS";
     } else if (info.value.recent_score?.[0]?.difficulty === 2) {
-        difficulty = "Future";
+        difficulty = "FTR";
     } else if (info.value.recent_score?.[0]?.difficulty === 3) {
-        difficulty = "Beyond";
+        difficulty = "BYD";
     }
+
+    columns[4].appendChild(createPara("Song ID: " + info.value.recent_score?.[0]?.song_id) + " " + difficulty);
 
     columns[5].appendChild(createPara("Score: " + info.value.recent_score?.[0]?.score));
     columns[4].appendChild(createPara("Shiny Perfect Count: " + info.value.recent_score?.[0]?.shiny_perfect_count));
