@@ -183,7 +183,7 @@ function updateContent() {
         difficulty = "BYD";
     }
 
-    columns[4].appendChild(createPara("Song ID: " + info.value.recent_score?.[0]?.song_id) + " " + difficulty);
+    columns[4].appendChild(createPara("Song ID: " + info.value.recent_score?.[0]?.song_id + " " + difficulty));
 
     columns[5].appendChild(createPara("Score: " + info.value.recent_score?.[0]?.score));
     columns[4].appendChild(createPara("Shiny Perfect Count: " + info.value.recent_score?.[0]?.shiny_perfect_count));
