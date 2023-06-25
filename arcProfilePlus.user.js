@@ -157,10 +157,10 @@ function updateContent() {
     columns[0].appendChild(createPara("Beyond Boost Gauge: " + Math.round(info.value.beyond_boost_gauge * 100) / 100));
 
     let multiplier = 1;
-    if (info.value.beyond_boost_gauge >= 100) {
-        multiplier = 2;
-    } else if (info.value.beyond_boost_gauge >= 200) {
+    if (info.value.beyond_boost_gauge >= 200) {
         multiplier = 3;
+    } else if (info.value.beyond_boost_gauge >= 100) {
+        multiplier = 2;
     }
 
     columns[1].appendChild(createPara(multiplier + "x Multiplier"));
